@@ -46,7 +46,7 @@ parser.add_argument('--manualSeed', type=int, help='manual seed')
 
 parser.add_argument('--nBottleneck', type=int,default=4000,help='of dim for bottleneck of encoder')
 parser.add_argument('--overlapPred',type=int,default=0,help='overlapping edges')
-parser.add_argument('--nef',type=int,default=128,help='of encoder filters in first conv layer')
+parser.add_argument('--nef',type=int,default=64,help='of encoder filters in first conv layer')
 parser.add_argument('--wtl2',type=float,default=0.999,help='0 means do not use else use with this weight')
 opt = parser.parse_args()
 

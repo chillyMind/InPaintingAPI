@@ -3,3 +3,4 @@ netmodels/.ipynb_checkpoints
 netmodels/__pycache__
 netmodels/model/
 node_modules/
+public/result/

@@ -84,6 +84,16 @@ app.post('/upload',multer({dest:'tmpimage/'}).single('upfile'),function(req,res)
               'x-sent' :true
             }
           }
+          //파일 다운로드
+          res.download(options.root+outputfilename,function(err){
+            if(err){
+              next(err);
+            }else{
+              console.log('Sent',filename)
+            }
+          })
+          /*
+          //웹브라우저로 띄우기
           res.sendFile(filename,options,function(err){
             if(err){
               next(err);
@@ -91,6 +101,7 @@ app.post('/upload',multer({dest:'tmpimage/'}).single('upfile'),function(req,res)
               console.log('Sent',filename);
             }
           })
+          */
           flag = true;
         }
       })
